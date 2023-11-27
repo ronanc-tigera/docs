@@ -1,15 +1,17 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const {themes} = require('prism-react-renderer');
+import {themes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type {Options, ThemeConfig} from '@docusaurus/preset-classic';
+import type {Options as ContentOptions} from '@docusaurus/plugin-content-docs';
+import variablesPlugin from './src/remark/variablesPlugin';
+import componentImagePlugin from './src/remark/componentImagePlugin';
+
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
-const variablesPlugin = require('./src/remark/variablesPlugin');
-const componentImagePlugin = require('./src/remark/componentImagePlugin');
-
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: 'Calico Documentation',
   tagline: 'Active, zero-trust based security for containers and Kubernetes',
   url: 'https://docs.tigera.io',
@@ -29,8 +31,8 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      // /** @type {import('@docusaurus/preset-classic').Options} */
+      {
         // TODO: try to find a way to not specify a default instance
         docs: {
           path: 'default',
@@ -47,12 +49,11 @@ const config = {
             require.resolve('./src/css/modal.scss'),
           ],
         },
-      }),
+      } as Options,
     ],
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
       metadata: [
         {name: 'keywords', content: 'kubernetes,k8s,kubernetes security,container security,kubernetes networking,kubernetes monitoring,cwpp,cnapp'}
@@ -319,12 +320,11 @@ const config = {
           },
         ],
       },
-    },
+    } as ThemeConfig,
   plugins: [
     'docusaurus-plugin-sass',
     [
       '@docusaurus/plugin-content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
       {
         id: 'calico',
         path: 'calico',
@@ -356,11 +356,10 @@ const config = {
         sidebarPath: require.resolve('./sidebars-calico.js'),
         beforeDefaultRemarkPlugins: [variablesPlugin, componentImagePlugin],
         editUrl: generateEditUrl,
-      },
+      } as ContentOptions,
     ],
     [
       '@docusaurus/plugin-content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
       {
         id: 'calico-enterprise',
         path: 'calico-enterprise',
@@ -398,11 +397,10 @@ const config = {
         sidebarPath: require.resolve('./sidebars-calico-enterprise.js'),
         beforeDefaultRemarkPlugins: [variablesPlugin, componentImagePlugin],
         editUrl: generateEditUrl,
-      },
+      } as ContentOptions,
     ],
     [
       '@docusaurus/plugin-content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
       {
         id: 'calico-cloud',
         path: 'calico-cloud',
@@ -424,7 +422,7 @@ const config = {
         sidebarPath: require.resolve('./sidebars-calico-cloud.js'),
         beforeDefaultRemarkPlugins: [variablesPlugin, componentImagePlugin],
         editUrl: generateEditUrl,
-      },
+      } as ContentOptions,
     ],
   ],
   customFields: {
@@ -432,7 +430,7 @@ const config = {
   },
 };
 
-module.exports = config;
+export default config;
 
 function generateEditUrl(params) {
   const { versionDocsDirPath, docPath } = params;
