@@ -1,12 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+import {themes} from 'prism-react-renderer';
+import variablesPlugin from './src/remark/variablesPlugin';
+// import componentImagePlugin from './src/remark/componentImagePlugin';
 
-const {themes} = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
-
-const variablesPlugin = require('./src/remark/variablesPlugin');
-const componentImagePlugin = require('./src/remark/componentImagePlugin');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -311,7 +310,7 @@ const config = {
           },
         },
         sidebarPath: undefined,
-        beforeDefaultRemarkPlugins: [variablesPlugin, componentImagePlugin],
+        beforeDefaultRemarkPlugins: [variablesPlugin],
         editUrl: generateEditUrl,
       },
     ],
@@ -321,7 +320,7 @@ const config = {
   },
 };
 
-module.exports = config;
+export default config;
 
 function generateEditUrl(params) {
   const { versionDocsDirPath, docPath } = params;
