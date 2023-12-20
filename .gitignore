@@ -40,3 +40,9 @@ test-build
 
 # Local Netlify folder
 .netlify
+
+# Argos Playright screenshots
+/screenshots/
+/test-results/
+/playwright-report/
+/playwright/.cache/

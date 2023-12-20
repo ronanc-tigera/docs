@@ -46,12 +46,15 @@
     "webpack": "^5.76.0"
   },
   "devDependencies": {
+    "@argos-ci/cli": "^1.0.4",
+    "@argos-ci/playwright": "^1.4.1",
     "@docusaurus/module-type-aliases": "^2.4.3",
     "@docusaurus/tsconfig": "3.0.0",
-    "@playwright/test": "^1.30.0",
+    "@playwright/test": "^1.40.1",
     "@testing-library/react": "^12.1.5",
     "@types/jest": "^29.5.0",
     "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
     "crawlee": "^3.1.4",
     "docusaurus-plugin-sass": "^0.2.2",
     "html-entities": "^2.3.3",
