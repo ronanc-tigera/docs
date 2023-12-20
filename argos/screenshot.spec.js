@@ -29,8 +29,8 @@ function screenshotPathname(pathname) {
 
 test.describe('Docusaurus site screenshots', () => {
   const pathnames = extractSitemapPathnames(sitemapPath);
-  console.log('Pathnames to screenshot:', pathnames);
-  // pathnames.forEach(screenshotPathname);
+  pathnames.slice(0, 10).forEach(screenshotPathname);
+  pathnames.forEach(screenshotPathname);
   // test 1 first
-  screenshotPathname('/calico-cloud/about/');
+  // screenshotPathname('/calico-cloud/about/');
 });
