@@ -117,7 +117,7 @@
 const {devices} = require('@playwright/test');
 
 const config = {
-  testDir: './__tests__',
+  testDir: './argos',
   webServer: {
     port: 3000,
     command: 'yarn start',
