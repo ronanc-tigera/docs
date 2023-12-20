@@ -63,7 +63,6 @@
     "jest-junit": "^15.0.0",
     "limiter": "^2.1.0",
     "needle": "^3.2.0",
-    "playwright": "^1.30.0",
     "sass": "^1.54.2",
     "ts-jest": "^29.1.0",
     "typescript": "~5.2.2",
