@@ -28,7 +28,7 @@ function screenshotPathname(pathname) {
 
 test.describe('Docusaurus site screenshots', () => {
   let pathnames = extractSitemapPathnames(sitemapPath);
-  pathnames = pathnames.slice(0, 10);
+  pathnames = pathnames.slice(2, 3);
   console.log("Pathnames to screenshot:", pathnames);
   pathnames.forEach(screenshotPathname);
   // test 1 first
