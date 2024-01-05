@@ -19,6 +19,7 @@ function waitForDocusaurusHydration() {
 function screenshotPathname(pathname) {
   test(`pathname ${pathname}`, async ({page}) => {
     const url = siteUrl + pathname;
+    console.log("URL = ", url);
     await page.goto(url);
     await page.waitForFunction(waitForDocusaurusHydration);
     await page.addStyleTag({content: stylesheet});
