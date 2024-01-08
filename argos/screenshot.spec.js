@@ -63,9 +63,8 @@ test.describe('Docusaurus site screenshots', () => {
 //     await page.goto(url);
 //     await page.waitForFunction(waitForDocusaurusHydration);
 //     await page.addStyleTag({content: stylesheet});
-//     // await argosScreenshot(page, pathnameToArgosName(pathname));
 //     await expect(page).toHaveScreenshot({fullPage: true});
-//     await expect(page).toMatchSnapshot({name: 'screenshots/custom-image.png'})
+//     // await expect(page).toMatchSnapshot({name: 'screenshots/custom-image.png'})
 //   });
 // }
 
