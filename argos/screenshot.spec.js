@@ -32,7 +32,7 @@ function waitForDocusaurusHydration() {
 // }
 
 
-function screenshotPathname(pathname) {
+async function screenshotPathname(pathname) {
   test(`pathname ${pathname}`, async ({page}) => {
     const url = siteUrl + pathname;
     console.log("URL = ", url);
@@ -43,13 +43,13 @@ function screenshotPathname(pathname) {
   });
 }
 
-test.describe('Docusaurus site screenshots', () => {
+test.describe('Docusaurus site screenshots', async () => {
   let pathnames = extractSitemapPathnames(sitemapPath);
   pathnames = pathnames.slice(2, 3);
   console.log("Pathnames to screenshot:", pathnames);
   // pathnames.forEach(screenshotPathname);
   for (const path of pathnames) {
-    screenshotPathname(path);
+    await screenshotPathname(path);
   }
   // test 1 first
   // screenshotPathname('/calico-cloud/about/');
