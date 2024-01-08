@@ -47,7 +47,7 @@ test.describe('Docusaurus site screenshots', () => {
   let pathnames = extractSitemapPathnames(sitemapPath);
   pathnames = pathnames.slice(2, 3);
   console.log("Pathnames to screenshot:", pathnames);
-  pathnames.forEach(screenshotPathname);
+  // pathnames.forEach(screenshotPathname);
   for (const path of pathnames) {
     screenshotPathname(path);
   }
@@ -55,7 +55,7 @@ test.describe('Docusaurus site screenshots', () => {
   // screenshotPathname('/calico-cloud/about/');
 });
 
-
+//////////////////////////
 // function screenshotPathname(pathname) {
 //   test(`pathname ${pathname}`, async ({page}) => {
 //     const url = siteUrl + pathname;
@@ -65,6 +65,7 @@ test.describe('Docusaurus site screenshots', () => {
 //     await page.addStyleTag({content: stylesheet});
 //     // await argosScreenshot(page, pathnameToArgosName(pathname));
 //     await expect(page).toHaveScreenshot({fullPage: true});
+//     await expect(page).toMatchSnapshot({name: 'screenshots/custom-image.png'})
 //   });
 // }
 
