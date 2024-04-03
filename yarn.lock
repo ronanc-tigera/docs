@@ -3107,6 +3107,14 @@
   resolved "https://registry.npmjs.org/@mdx-js/util/-/util-1.6.22.tgz"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
+"@mendable/search@^0.0.205":
+  version "0.0.205"
+  resolved "https://registry.yarnpkg.com/@mendable/search/-/search-0.0.205.tgz#6126a86609abe80376dfb740783400683d47d735"
+  integrity sha512-7Vd3scF33wg455y2beNtKRP85i6y7hj+1AXJWs26fLKg6MUi+tp9nWnSX+7v4Et2LhpGSbuwMXTorQ7l9AvIkQ==
+  dependencies:
+    html-react-parser "^4.2.0"
+    posthog-js "^1.45.1"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -5652,19 +5660,19 @@ domexception@^4.0.0:
   dependencies:
     webidl-conversions "^7.0.0"
 
+domhandler@5.0.3, domhandler@^5.0.2, domhandler@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-5.0.3.tgz#cc385f7f751f1d1fc650c21374804254538c7d31"
+  integrity sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==
+  dependencies:
+    domelementtype "^2.3.0"
+
 domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.3.1:
   version "4.3.1"
   resolved "https://registry.npmjs.org/domhandler/-/domhandler-4.3.1.tgz"
   integrity sha512-GrwoxYN+uWlzO8uhUXRl0P+kHE4GtVPfYzVLcUxPL7KNdHKj66vvlhiweIHqYYXWlw+T8iLMp42Lm67ghw4WMQ==
   dependencies:
     domelementtype "^2.2.0"
-
-domhandler@^5.0.2, domhandler@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-5.0.3.tgz#cc385f7f751f1d1fc650c21374804254538c7d31"
-  integrity sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==
-  dependencies:
-    domelementtype "^2.3.0"
 
 dompurify@=2.3.10:
   version "2.3.10"
@@ -6122,6 +6130,11 @@ feed@^4.2.2:
   integrity sha512-u5/sxGfiMfZNtJ3OvQpXcvotFpYkL0n9u9mM2vkui2nGo8b4wvDkJ8gAkYqbA8QpGyFCv3RK0Z+Iv+9veCS9bQ==
   dependencies:
     xml-js "^1.6.11"
+
+fflate@^0.4.8:
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/fflate/-/fflate-0.4.8.tgz#f90b82aefbd8ac174213abb338bd7ef848f0f5ae"
+  integrity sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA==
 
 figlet@^1.1.1:
   version "1.6.0"
@@ -6791,6 +6804,14 @@ hpack.js@^2.1.6:
     readable-stream "^2.0.1"
     wbuf "^1.1.0"
 
+html-dom-parser@5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/html-dom-parser/-/html-dom-parser-5.0.3.tgz#823ecc15292c36cb1611213384c9eb2fbb085e5c"
+  integrity sha512-slsc6ipw88OUZjAayRs5NTmfOQCwcUa3hNyk6AdsbQxY09H5Lr1Y3CZ4ZlconMKql3Ga6sWg3HMoUzo7KSItaQ==
+  dependencies:
+    domhandler "5.0.3"
+    htmlparser2 "9.0.0"
+
 html-encoding-sniffer@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/html-encoding-sniffer/-/html-encoding-sniffer-3.0.0.tgz#2cb1a8cf0db52414776e5b2a7a04d5dd98158de9"
@@ -6821,6 +6842,16 @@ html-minifier-terser@^6.0.2, html-minifier-terser@^6.1.0:
     relateurl "^0.2.7"
     terser "^5.10.0"
 
+html-react-parser@^4.2.0:
+  version "4.2.10"
+  resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-4.2.10.tgz#618364ce90b2eb5fa8b80fe359eb553f97aaefa3"
+  integrity sha512-JyKZVQ+kQ8PdycISwkuLbEEvV/k4hWhU6cb6TT7yGaYwdqA7cPt4VRYXkCZcix2vlQtgDBSMJUmPI2jpNjPGvg==
+  dependencies:
+    domhandler "5.0.3"
+    html-dom-parser "5.0.3"
+    react-property "2.0.2"
+    style-to-js "1.1.8"
+
 html-tags@^3.2.0:
   version "3.2.0"
   resolved "https://registry.npmjs.org/html-tags/-/html-tags-3.2.0.tgz"
@@ -6842,6 +6873,16 @@ html-webpack-plugin@^5.5.0:
     pretty-error "^4.0.0"
     tapable "^2.0.0"
 
+htmlparser2@9.0.0, htmlparser2@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-9.0.0.tgz#e431142b7eeb1d91672742dea48af8ac7140cddb"
+  integrity sha512-uxbSI98wmFT/G4P2zXx4OVx04qWUmyFPrD2/CNepa2Zo3GPNaCaaxElDgwUrwYWkK1nr9fft0Ya8dws8coDLLQ==
+  dependencies:
+    domelementtype "^2.3.0"
+    domhandler "^5.0.3"
+    domutils "^3.1.0"
+    entities "^4.5.0"
+
 htmlparser2@^6.1.0:
   version "6.1.0"
   resolved "https://registry.npmjs.org/htmlparser2/-/htmlparser2-6.1.0.tgz"
@@ -6861,16 +6902,6 @@ htmlparser2@^8.0.1:
     domhandler "^5.0.3"
     domutils "^3.0.1"
     entities "^4.4.0"
-
-htmlparser2@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-9.0.0.tgz#e431142b7eeb1d91672742dea48af8ac7140cddb"
-  integrity sha512-uxbSI98wmFT/G4P2zXx4OVx04qWUmyFPrD2/CNepa2Zo3GPNaCaaxElDgwUrwYWkK1nr9fft0Ya8dws8coDLLQ==
-  dependencies:
-    domelementtype "^2.3.0"
-    domhandler "^5.0.3"
-    domutils "^3.1.0"
-    entities "^4.5.0"
 
 http-cache-semantics@^4.0.0:
   version "4.1.1"
@@ -7075,6 +7106,11 @@ inline-style-parser@0.1.1:
   version "0.1.1"
   resolved "https://registry.npmjs.org/inline-style-parser/-/inline-style-parser-0.1.1.tgz"
   integrity sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==
+
+inline-style-parser@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/inline-style-parser/-/inline-style-parser-0.2.2.tgz#d498b4e6de0373458fc610ff793f6b14ebf45633"
+  integrity sha512-EcKzdTHVe8wFVOGEYXiW9WmJXPjqi1T+234YpJr98RiFYKHV3cdy1+3mkTE+KHTHxFFLH51SfaGOoUdW+v7ViQ==
 
 inquirer@^8.2.4:
   version "8.2.5"
@@ -9271,6 +9307,19 @@ postcss@^8.3.11, postcss@^8.4.13, postcss@^8.4.14, postcss@^8.4.7:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+posthog-js@^1.45.1:
+  version "1.116.6"
+  resolved "https://registry.yarnpkg.com/posthog-js/-/posthog-js-1.116.6.tgz#9a5c9f49230a76642f4c44d93b96710f886c2880"
+  integrity sha512-rvt8HxzJD4c2B/xsUa4jle8ApdqljeBI2Qqjp4XJMohQf18DXRyM6b96H5/UMs8jxYuZG14Er0h/kEIWeU6Fmw==
+  dependencies:
+    fflate "^0.4.8"
+    preact "^10.19.3"
+
+preact@^10.19.3:
+  version "10.20.1"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.20.1.tgz#1bc598ab630d8612978f7533da45809a8298542b"
+  integrity sha512-JIFjgFg9B2qnOoGiYMVBtrcFxHqn+dNXbq76bVmcaHYJFYR4lW67AOcXgAYQQTDYXDOg/kTZrKPNCdRgJ2UJmw==
+
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
@@ -9729,6 +9778,11 @@ react-player@^2.11.0:
     memoize-one "^5.1.1"
     prop-types "^15.7.2"
     react-fast-compare "^3.0.1"
+
+react-property@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-property/-/react-property-2.0.2.tgz#d5ac9e244cef564880a610bc8d868bd6f60fdda6"
+  integrity sha512-+PbtI3VuDV0l6CleQMsx2gtK0JZbZKbpdu5ynr+lbsuvtmgbNcS3VM0tuY2QjFNOcWxvXeHjDpy42RO+4U2rug==
 
 react-redux@^7.2.4:
   version "7.2.9"
@@ -10808,12 +10862,26 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz"
   integrity sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==
 
+style-to-js@1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/style-to-js/-/style-to-js-1.1.8.tgz#b3357ad6cbd7cc1216a432ce89c31e554d0861a7"
+  integrity sha512-bPSspCXkkhETLXnEgDbaoWRWyv3lF2bj32YIc8IElok2IIMHUlZtQUrxYmAkKUNxpluhH0qnKWrmuoXUyTY12g==
+  dependencies:
+    style-to-object "1.0.3"
+
 style-to-object@0.3.0, style-to-object@^0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/style-to-object/-/style-to-object-0.3.0.tgz"
   integrity sha512-CzFnRRXhzWIdItT3OmF8SQfWyahHhjq3HwcMNCNLn+N7klOOqPjMeG/4JSu77D7ypZdGvSzvkrbyeTMizz2VrA==
   dependencies:
     inline-style-parser "0.1.1"
+
+style-to-object@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/style-to-object/-/style-to-object-1.0.3.tgz#5ce90eb7f03ef5044bd70a3a23a3c1387fcac5b4"
+  integrity sha512-xOpx7S53E0V3DpVsvt7ySvoiumRpfXiC99PUXLqGB3wiAnN9ybEIpuzlZ8LAZg+h1sl9JkEUwtSQXxcCgFqbbg==
+  dependencies:
+    inline-style-parser "0.2.2"
 
 style-value-types@4.1.4:
   version "4.1.4"
