@@ -1,11 +1,12 @@
 import React from 'react';
-import './styles.css';
+import { ChakraProvider, Text } from '@chakra-ui/react';
+import { imageCaptionStyles } from './styles';
+import { theme } from '../../theme';
 
-const ImageCaption = ({ children }) => {  return (
-    <p className="image-caption">
-      {children}
-    </p>
-  );
-};
+const ImageCaption: React.FC<React.PropsWithChildren> = ({ children }) => (
+  <ChakraProvider theme={theme}>
+    <Text sx={imageCaptionStyles}>{children}</Text>
+  </ChakraProvider>
+);
 
-export default ImageCaption
+export default ImageCaption;
