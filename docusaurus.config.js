@@ -80,15 +80,6 @@ const config = {
         contextualSearch: true,
         searchPagePath: '/search',
       },
-      announcementBar: {
-        id: 'ai-bot-announcement',
-        content:
-          '🤖 Try exploring Calico Documentation with our new AI bot. Look for the <b>Ask AI</b> button at the' +
-          ' bottom of your screen. 🤖',
-        backgroundColor: '#FCE181',
-        textColor: '#000',
-        isCloseable: true,
-      },
       //      "announcementBar": {
       //        "id": "calico_ebpf",
       //        "content": "Use Calico <img src=\"/img/brands/ebpf_logo.svg\" style=\"height:1.5rem; margin: 0 5px 0 5px;" +
@@ -354,7 +345,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['powershell'],
+        additionalLanguages: ['powershell', 'bash'],
         magicComments: [
           // Default highlight class name (should be specified)-
           {
