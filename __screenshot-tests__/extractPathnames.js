@@ -15,6 +15,6 @@ const extractSitemapPathnames = (sitemapPath) => {
 };
 
 const extractPathnames = () =>
-  fs.writeFileSync('argos/pathnames.json', JSON.stringify(extractSitemapPathnames(sitemapPath), null, 2));
+  fs.writeFileSync('__screenshot-tests__/pathnames.json', JSON.stringify(extractSitemapPathnames(sitemapPath), null, 2));
 
 extractPathnames();
