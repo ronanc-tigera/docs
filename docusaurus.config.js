@@ -93,14 +93,14 @@ const config = {
         isCloseable: true,
       },
       */
-      announcementBar: {
-        id: 'KubeCon24',
-        content: "🎉 Learn the latest trends in Kubernetes networking and security. Join us at CalicoCon 2024 on" +
-          " November 12. <a href='https://link.tigera.io/uhuRC'><strong>Register now!</strong></a> :🎉",
-        backgroundColor: '#FCE181',
-        textColor: '#000',
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: 'KubeCon24',
+      //   content: "🎉 Learn the latest trends in Kubernetes networking and security. Join us at CalicoCon 2024 on" +
+      //     " November 12. <a href='https://link.tigera.io/uhuRC'><strong>Register now!</strong></a> :🎉",
+      //   backgroundColor: '#FCE181',
+      //   textColor: '#000',
+      //   isCloseable: true,
+      // },
       navbar: {
         logo: {
           src: 'img/tigera-logo-black.png',
