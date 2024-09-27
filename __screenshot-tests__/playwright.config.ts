@@ -20,7 +20,7 @@ const config: PlaywrightTestConfig = {
     },
   ],
   // timeout: 120 * 1000,
-  reporter: [['html', { open: 'never' }]], //'html',
+  reporter: 'html', //[['html', { open: 'never' }]], //
 };
 
 export default config;
