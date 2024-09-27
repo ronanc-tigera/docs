@@ -5,7 +5,7 @@ publish = "build/"
 
 # Default build command.
 # Changed here to make build for D3 testing
-command = "make build"
+command = "make netlify"
 
 [[plugins]]
 # Installs the Lighthouse Build Plugin for all deploy contexts
@@ -21,7 +21,7 @@ package = "@netlify/plugin-lighthouse"
 
 #publish = "output/"
 #command = "make publish"
-#environment = { NODE_VERSION = "14.15.3" }
+#environment = { NODE_VERSION = "20.17.0" }
 
 # Deploy Preview context: all deploys generated from
 # a pull/merge request will inherit these settings.
