@@ -25,20 +25,20 @@ const config = {
   },
   scripts: [
     {
-      src: "https://widget.kapa.ai/kapa-widget.bundle.js",
-      "data-website-id": "578b0d26-ff67-42e3-b465-5839865a7471",
-      "data-project-name": "Calico",
-      "data-project-color": "#F89C1D",
-      "data-project-logo":
-        "https://www.tigera.io/app/uploads/2021/06/Tigera-orange.png",
-      "data-modal-disclaimer": "The Calico Docs AI answers questions based on what it finds in our product documentation. As with all AI solutions, it's a good idea to verify answers in the source material. ",
+      src: 'https://widget.kapa.ai/kapa-widget.bundle.js',
+      'data-website-id': '578b0d26-ff67-42e3-b465-5839865a7471',
+      'data-project-name': 'Calico',
+      'data-project-color': '#F89C1D',
+      'data-project-logo': 'https://www.tigera.io/app/uploads/2021/06/Tigera-orange.png',
+      'data-modal-disclaimer':
+        "The Calico Docs AI answers questions based on what it finds in our product documentation. As with all AI solutions, it's a good idea to verify answers in the source material. ",
       //"data-modal-example-questions": "Docs Calico use eBPF?,Get started with egress gateways",
-      "data-modal-ask-ai-input-placeholder": "Ask me a question about Calico",
-      "data-font-family": "Poppins,Helvetica Neue,Helvetica,Arial,sans-serif",
-      "data-modal-border-radius": "6px",
-      "data-button-box-shadow": "2px 2px 8px rgba(0, 0, 0, 0.2)",
-      "data-modal-header-bg-color": "#FFFFFF",
-      "data-user-analytics-fingerprint-enabled": "true",
+      'data-modal-ask-ai-input-placeholder': 'Ask me a question about Calico',
+      'data-font-family': 'Poppins,Helvetica Neue,Helvetica,Arial,sans-serif',
+      'data-modal-border-radius': '6px',
+      'data-button-box-shadow': '2px 2px 8px rgba(0, 0, 0, 0.2)',
+      'data-modal-header-bg-color': '#FFFFFF',
+      'data-user-analytics-fingerprint-enabled': 'true',
       async: true,
     },
   ],
@@ -370,7 +370,7 @@ const config = {
         path: 'calico',
         routeBasePath: 'calico',
         editCurrentVersion: true,
-        onlyIncludeVersions: ['3.28','3.27','3.26'],
+        onlyIncludeVersions: ['3.28', '3.27', '3.26'],
         lastVersion: '3.28',
         versions: {
           current: {
@@ -406,7 +406,7 @@ const config = {
         path: 'calico-enterprise',
         routeBasePath: 'calico-enterprise',
         editCurrentVersion: true,
-        onlyIncludeVersions: ['3.20-1', '3.19-2','3.18-2', '3.17'],
+        onlyIncludeVersions: ['3.20-1', '3.19-2', '3.18-2', '3.17'],
         //lastVersion: '3.19-2',
         versions: {
           current: {
@@ -459,10 +459,6 @@ const config = {
             path: '/',
             banner: 'none',
           },
-          '19-2': {
-            path: '/',
-            banner: 'none',
-          },
         },
         sidebarPath: './sidebars-calico-cloud.js',
         editUrl: generateEditUrl,
@@ -478,7 +474,7 @@ const config = {
         editCurrentVersion: true,
         onlyIncludeVersions: ['current'],
         versions: {
-          current:{
+          current: {
             path: '/',
           },
         },
@@ -486,14 +482,14 @@ const config = {
         sidebarPath: './sidebars-use-cases.js',
         editUrl: generateEditUrl,
       },
-    ]
+    ],
   ],
   customFields: {
     isTesting: process.env.TESTING || false,
   },
 };
 
-export default config
+export default config;
 
 function generateEditUrl(params) {
   const { versionDocsDirPath, docPath } = params;
