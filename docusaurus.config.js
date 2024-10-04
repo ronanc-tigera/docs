@@ -345,7 +345,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['powershell', 'bash'],
+        additionalLanguages: ['powershell'],
         magicComments: [
           // Default highlight class name (should be specified)-
           {
