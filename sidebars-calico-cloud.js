@@ -433,6 +433,7 @@ module.exports = {
           link: { type: 'doc', id: 'reference/resources/index' },
           items: [
             'reference/resources/overview',
+            'reference/resources/bfdconfig',
             'reference/resources/bgpconfig',
             'reference/resources/bgppeer',
             'reference/resources/bgpfilter',
@@ -471,6 +472,7 @@ module.exports = {
             'reference/resources/node',
             'reference/resources/packetcapture',
             'reference/resources/remoteclusterconfiguration',
+            'reference/resources/runtimesecurity',
             'reference/resources/securityeventwebhook',
             'reference/resources/stagedglobalnetworkpolicy',
             'reference/resources/stagedkubernetesnetworkpolicy',
