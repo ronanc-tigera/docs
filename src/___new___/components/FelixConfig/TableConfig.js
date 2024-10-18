@@ -1,5 +1,6 @@
 import React from 'react';
 import DOMPurify from 'dompurify';
+import styles from './styles.module.css';
 
 const getSanitizedData = ({ fieldData }) => ({
   sanitizedDescription: { __html: DOMPurify.sanitize(fieldData.DescriptionHTML) },
@@ -10,7 +11,7 @@ const TableConfig = ({ fieldData }) => {
   const { sanitizedDescription, sanitizedSchema } = getSanitizedData({ fieldData });
 
   return (
-    <table>
+    <table className={styles.felixTable}>
       <thead>
         <tr>
           <th>Attribute</th>

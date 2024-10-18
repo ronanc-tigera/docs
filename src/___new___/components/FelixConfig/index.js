@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 import TableCRD from './TableCRD';
 import TableConfig from './TableConfig';
 import TableEnv from './TableEnv';
-import Styles from './styles.css';
+import styles from './styles.module.css';
 
 const FelixConfigTable = ({ configType, fieldData }) => {
   let table;
@@ -55,30 +55,31 @@ const FelixConfig = ({ configType, name }) => {
     );
   } else if (configType === 'configenv') {
     content = (
-      <div>
+      <div className={styles.tabsContainer}>
         {matchedGroup.Fields.map((field, index) => (
-          <div key={index}>
-            <Tabs groupId='operating-systems'>
-              <TabItem
-                value='apple'
-                label='Configuration file'
-              >
-                <FelixConfigTable
-                  configType='config'
-                  fieldData={field}
-                />
-              </TabItem>
-              <TabItem
-                value='orange'
-                label='Environment variable'
-              >
-                <FelixConfigTable
-                  configType='env'
-                  fieldData={field}
-                />
-              </TabItem>
-            </Tabs>
-          </div>
+          <Tabs
+            groupId='operating-systems'
+            key={index}
+          >
+            <TabItem
+              value='apple'
+              label='Configuration file'
+            >
+              <FelixConfigTable
+                configType='config'
+                fieldData={field}
+              />
+            </TabItem>
+            <TabItem
+              value='orange'
+              label='Environment variable'
+            >
+              <FelixConfigTable
+                configType='env'
+                fieldData={field}
+              />
+            </TabItem>
+          </Tabs>
         ))}
       </div>
     );
